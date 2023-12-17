@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,7 +14,6 @@ import androidx.annotation.Nullable;
 import com.example.apirest.Model.Persona;
 
 import java.util.List;
-import java.util.Map;
 
 public class PersonaAdapter extends ArrayAdapter<Persona> {
 
@@ -31,7 +29,7 @@ public class PersonaAdapter extends ArrayAdapter<Persona> {
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater layoutInflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView=layoutInflater.inflate(R.layout.content_main,parent,false);
+        View rowView=layoutInflater.inflate(R.layout.content_layout,parent,false);
 
         TextView txtidPersona=(TextView)rowView.findViewById(R.id.IdPersona);
         TextView txtNombre=(TextView)rowView.findViewById(R.id.Nombre);;

@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
+    tools:context=".ContactosActivity"
     android:orientation="vertical"
     android:paddingTop="50px"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/contactos_layout">
 
               <TextView
                 android:id="@+id/IdPersona"

@@ -59,11 +59,11 @@ public class PersonaActivity extends AppCompatActivity {
                 p.setApellidos(txtApellidos.getText().toString());
                 if(id.trim().length()==0||id.equals("")){
                     addPersona(p);
-                    Intent intent =new Intent(PersonaActivity.this,MainActivity.class);
+                    Intent intent =new Intent(PersonaActivity.this, ContactosActivity.class);
                     startActivity(intent);
                 }else{
                     updatePersona(p,Integer.valueOf(id));
-                    Intent intent =new Intent(PersonaActivity.this,MainActivity.class);
+                    Intent intent =new Intent(PersonaActivity.this, ContactosActivity.class);
                     startActivity(intent);
                 }
 
@@ -74,7 +74,7 @@ public class PersonaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 deletePersona(Integer.valueOf(id));
-                Intent intent =new Intent(PersonaActivity.this,MainActivity.class);
+                Intent intent =new Intent(PersonaActivity.this, ContactosActivity.class);
                 startActivity(intent);
             }
         });
@@ -82,7 +82,7 @@ public class PersonaActivity extends AppCompatActivity {
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(PersonaActivity.this,MainActivity.class);
+                Intent intent =new Intent(PersonaActivity.this, ContactosActivity.class);
                 startActivity(intent);
             }
         });
@@ -103,7 +103,7 @@ public class PersonaActivity extends AppCompatActivity {
                 Log.e("Error:",t.getMessage());
             }
         });
-        Intent intent =new Intent(PersonaActivity.this,MainActivity.class);
+        Intent intent =new Intent(PersonaActivity.this, ContactosActivity.class);
         startActivity(intent);
     }
     public void updatePersona(Persona p,int id){
@@ -121,7 +121,7 @@ public class PersonaActivity extends AppCompatActivity {
                 Log.e("Error:",t.getMessage());
             }
         });
-        Intent intent =new Intent(PersonaActivity.this,MainActivity.class);
+        Intent intent =new Intent(PersonaActivity.this, ContactosActivity.class);
         startActivity(intent);
     }
     public void deletePersona(int id){
@@ -140,7 +140,7 @@ public class PersonaActivity extends AppCompatActivity {
                 Log.e("Error:",t.getMessage());
             }
         });
-        Intent intent =new Intent(PersonaActivity.this,MainActivity.class);
+        Intent intent =new Intent(PersonaActivity.this, ContactosActivity.class);
         startActivity(intent);
     }
 }

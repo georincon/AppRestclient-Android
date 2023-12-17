@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="LISTA CONTACTOS"
+            android:label="Pagina Principal"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,11 +23,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ContactosActivity"
+            android:label="LISTA CONTACTOS"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"
+                />
+        </activity>
+        <activity
             android:name=".PersonaActivity"
             android:label="Nuevo Usuario">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
+                android:value=".ContactosActivity"
                 />
         </activity>
 
